@@ -24,11 +24,12 @@ public class MainActivity extends AppCompatActivity {
         btLogin =(Button)findViewById(R.id.btLOGIN);
         b2Call = (Button)findViewById(R.id.btCall) ;
 
+
         b2Call.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent CallINENT = new Intent( Intent.ACTION_VIEW, Uri.parse("tel:9510300000"));
+                Intent CallINENT = new Intent( Intent.ACTION_DIAL, Uri.parse("tel:9510300000"));
                 startActivity(CallINENT);
 
             }
