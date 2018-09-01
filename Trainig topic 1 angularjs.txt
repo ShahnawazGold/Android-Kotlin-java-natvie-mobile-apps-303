@@ -1,0 +1,213 @@
+
+augustine.francis93@gmail.com
+===================angularjs========
+
+1) AngularJS is a very powerful JavaScript Framework. It is used in Single Page Application (SPA) projects. It extends HTML DOM with additional attributes and makes it more responsive to user actions.
+
+
+2) AngularJS is an open source web application framework. It was originally developed in 2009 by Misko Hevery and Adam Abrons. It is now maintained by Google. Its latest version is 1.4.3.
+
+=================Features============
+
+1)	 AngularJS is a powerful JavaScript based development framework to create RICH Internet Application(RIA).
+
+2) 	AngularJS provides developers options to write client side application (using JavaScript) in a clean MVC(Model View Controller) way.
+
+3) 	Application written in AngularJS is cross-browser compliant. AngularJS automatically handles JavaScript code suitable for each browser.
+
+4)	AngularJS is open source, completely free, and used by thousands of developers around the world. It is licensed under 
+the Apache License version 2.0
+
+======================Core Features=============
+
+
+
+1)	Data-binding :
+
+		 It is the automatic synchronization of data between model and view components.
+
+2)	Scope :
+
+		These are objects that refer to the model. They act as a glue between controller and view.
+
+3)	Controller:
+		 These are JavaScript functions that are bound to a particular scope.
+
+4)	Services :
+
+ 		 AngularJS come with several built-in services for example $https: to make a XMLHttpRequests. These are 		singleton objects which are instantiated only once in app.
+
+5)	Filters :
+
+	 These select a subset of items from an array and returns a new array.
+
+6)	Directives :
+		 Directives are markers on DOM elements (such as elements, attributes, css, and more). These can be used to create custom HTML tags that serve as new, custom widgets. AngularJS has built-in directives (ngBind, ngModel...)
+
+7)	Templates :
+
+		 These are the rendered view with information from the controller and model. These can be a single file (like index.html) or multiple views in one page using "partials".
+
+8)	Routing:	
+		 It is concept of switching views.
+
+9)             Model View Whatever :
+
+ 			MVC is a design pattern for dividing an application into different parts (called Model, View and 			Controller), each with distinct responsibilities. AngularJS does not implement MVC in the 			traditional sense, but rather something closer to MVVM (Model-View-ViewModel). The Angular JS 			team refers it humorously as Model View Whatever.
+
+10)	Deep Linking :
+
+ 		Deep linking allows you to encode the state of application in the URL so that it can be bookmarked. The 		application can then be restored from the URL to the same state.
+
+11)	Dependency Injection:
+
+		 AngularJS has a built-in dependency injection subsystem that helps the developer by making the application 		easier to develop, understand, and test.
+
+
+=====================MVC Architecture============
+
+Model View Controller or MVC as it is popularly called, is a software design pattern for developing web applications. 
+
+1)	Model : 
+		It is the lowest level of the pattern responsible for maintaining data.
+
+2)	View :
+		It is responsible for displaying all or a portion of the data to the user.
+
+3)	Controller :
+		 It is a software Code that controls the interactions between the Model and View.
+
+
+==================First Application=============
+
+
+
+1)	ng-app :
+		This directive defines and links an AngularJS application to HTML.
+
+2)	ng-model :
+		This directive binds the values of AngularJS application data to HTML input controls.
+
+3)	ng-bind:
+		  This directive binds the AngularJS Application data to HTML tags.
+
+======FRAMWORK============
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js">
+</script>
+
+Step 1:
+
+<div ng-app = "">
+   ...
+</div>
+
+Step 2:
+
+<p>Enter your Name: <input type = "text" ng-model = "name"></p>
+
+Step 3:
+<p>Hello <span ng-bind = "name"></span>!</p>
+
+
+============
+
+<html>
+   
+   <head>
+      <title>AngularJS First Application</title>
+   </head>
+   
+   <body>
+      <h1>Sample Application</h1>
+      
+      <div ng-app = "">
+         <p>Enter your Name: <input type = "text" ng-model = "name"></p>
+         <p>Hello <span ng-bind = "name"></span>!</p>
+      </div>
+      
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+      
+   </body>
+</html>
+
+====================Directives==================
+
+1) 	ng-app :
+		 This directive starts an AngularJS Application.
+
+2) 	ng-init :
+		This directive initializes application data.
+
+3)	ng-model:
+
+		 This directive binds the values of AngularJS application data to HTML input controls.
+
+4)	ng-repeat : 
+		This directive repeats html elements for each item in a collection.
+
+======================
+ng-app directive
+
+<div ng-app = "">
+   ...
+</div>
+
+==============
+ng-init directive
+
+<div ng-app = "" 
+ng-init = "countries = [
+{locale:'en-US',name:'United States'},
+ {locale:'en-GB',name:'United Kingdom'},
+ {locale:'en-FR',name:'France'}
+]">
+   ...
+</div>
+
+===================
+ng-model directive
+
+<div ng-app = "">
+   ...
+   <p>Enter your Name: <input type = "text" ng-model = "name"></p>
+</div>
+================
+ng-repeat directive
+
+<div ng-app = "">
+   ...
+   <p>List of Countries with locale:</p>
+   
+   <ol>
+      <li ng-repeat = "country in countries">
+         {{ 'Country: ' + country.name + ', Locale: ' + country.locale }}
+      </li>
+   </ol>
+   
+</div>
+
+=======================EXMPLE HERE===================
+ <h1>Sample Application</h1>
+      
+      <div ng-app = ""  ng-init = "countries = [
+{locale:'en-US',name:'United States'}, 
+{locale:'en-GB',name:'United Kingdom'},
+ {locale:'en-FR',name:'France'} ]"> 
+
+         <p>Enter your Name: <input type = "text" ng-model = "name"></p>
+         <p>Hello <span ng-bind = "name"></span>!</p>
+         <p>List of Countries with locale:</p>
+      
+         <ol>
+            <li ng-repeat = "country in countries">
+               {{ 'Country: ' + country.name + ', Locale: ' + country.locale }}
+            </li>
+         </ol>
+      </div>
+      
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+
+
+
+	
